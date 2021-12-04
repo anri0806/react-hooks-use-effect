@@ -10,12 +10,12 @@ function DogPics() {
     fetch("https://dog.ceo/api/breeds/image/random/3")
       .then((r) => r.json())
       .then((data) => {
-        console.log("setState");
+        console.log("inside fetch DogPics");
         setImages(data.message);
       });
-  });
+  }, []);
 
-  console.log("render");
+  console.log("render outside fetch dogPics");
 
   return (
     <div>
